@@ -47,9 +47,6 @@ jobs:
         
       - name: Build wheels
         run: pypa/cibuildwheel@v2.0.0
-
-      - name: Build wheels
-        run: python -m cibuildwheel --output-dir wheelhouse
         
       - uses: actions/upload-artifact@v2
         with:
