@@ -15,9 +15,9 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        fortran-compiler: [gfortran-9] # Version of GFortran we want to use.
-        python_version: ['3.8']
+        os: [ubuntu-latest] ### windows-latest, macos-latest, something wrong with windows and macos
+        fortran-compiler: [gfortran-9, gfortran-10] # Version of GFortran we want to use.
+        python_version: ['3.6','3.7','3.8']
     env:
       FC: ${{ matrix.fortran-compiler }}
       
