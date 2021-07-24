@@ -16,7 +16,7 @@ jobs:
     strategy:
       matrix:
         os: [macos-latest]
-        fortran-compiler: [gfortran] # Version of GFortran we want to use.
+        fortran-compiler: [gfortran-9] # Version of GFortran we want to use.
         python_version: ['3.8']
     env:
       FC: ${{ matrix.fortran-compiler }}
@@ -43,6 +43,5 @@ jobs:
         run: brew install gcc@9
     
       - name: Build
-        run: gfortran-9 -c src/mask_interpolation.f90
-##        run: f2py -c src/mask_interpolation.f90 -m mask_interpolation --f90flags='-fopenmp' -lgomp
+        run: f2py -c src/mask_interpolation.f90 -m mask_interpolation --fcompiler=FC --f90flags='-fopenmp' -lgomp
         
