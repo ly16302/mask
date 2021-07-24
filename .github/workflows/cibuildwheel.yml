@@ -38,9 +38,6 @@ jobs:
         if: contains(matrix.os, 'ubuntu')
         run: sudo apt-get install ${{ matrix.fortran-compiler}}
     
-      - name: Install GFortran macOS
-        if: contains(matrix.os, 'macos')
-    
       - name: Build
         run: f2py -c -m src/mask_interpolation.f90 mask_interpolation
         
