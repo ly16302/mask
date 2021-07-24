@@ -33,11 +33,8 @@ jobs:
 
       - name: Install GFortran Linux
         if: contains(matrix.os, 'ubuntu')
-        run: |
-         sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-         sudo apt-get update
-         sudo apt-get install ${{ matrix.fortran-compiler}}
-      
+        run: sudo apt-get install ${{ matrix.fortran-compiler}}
+    
       - name: Install GFortran macOS
         if: contains(matrix.os, 'macos')
         run: |
