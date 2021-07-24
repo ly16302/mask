@@ -1,2 +1,1 @@
-include examples/*
-include *.so
+include mask/*
