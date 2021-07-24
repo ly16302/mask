@@ -2,7 +2,7 @@ from setuptools import setup, find_packages, Extension
 import sys 
 
 setup(
-   name="mask",
+   name="example",
    version="0.0.1",
    author="Liang Yang",
    author_email="liang.yang@cranfield.ac.uk",
