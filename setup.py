@@ -1,6 +1,5 @@
 from setuptools import setup
-from numpy.distutils.core import Extension
-from numpy.distutils.core import setup
+import sys 
 
 setup(
    name="mask",
@@ -9,6 +8,5 @@ setup(
    author_email="liang.yang@cranfield.ac.uk",
    description="Example package to demonstrate wheel issue",
    packages=['mask', 'mask.extension_package'],
-   ext_modules=[Extension('mask',
-                          ['src/mask_interpolation.f90'])],
+   ext_modules=[Extension('mask', sources=['src/mask_interpolation.f90'])],
 )
