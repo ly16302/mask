@@ -6,5 +6,5 @@ mask generation library for wyvern
 
 || **Linux** | **OS X (10.14+)** | **Windows** | **Documentation**|
 |:------|:-----|:-----|:-----|:-----|
-|**Build**|![Actions Status](https://github.com/ly16302/mask/workflows/cibuildwheel/badge.svg)| 
+|**Build**| ✅ | ✅ | ✅ | 
 |**PyPI**| |
