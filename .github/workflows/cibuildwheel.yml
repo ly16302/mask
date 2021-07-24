@@ -45,8 +45,12 @@ jobs:
       - name: Build f2py
         run: f2py -c src/mask_interpolation.f90 -m mask_interpolation --f90flags='-fopenmp' -lgomp
         
-      - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==2.0.0
+      - name: Build wheels
+        run: pypa/cibuildwheel@v2.0.0
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
+        
+      - uses: actions/upload-artifact@v2
+        with:
+          path: ./wheelhouse/*.whl
