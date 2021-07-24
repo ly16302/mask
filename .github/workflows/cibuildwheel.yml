@@ -39,5 +39,5 @@ jobs:
         run: sudo apt-get install ${{ matrix.fortran-compiler}}
     
       - name: Build
-        run: f2py -c -m src/mask_interpolation.f90 mask_interpolation
+        run: f2py -c src/mask_interpolation.f90 -m mask_interpolation --f90flags='-fopenmp' -lgomp
         
