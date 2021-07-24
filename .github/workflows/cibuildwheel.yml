@@ -43,6 +43,5 @@ jobs:
         run: brew install gcc@9
     
       - name: Build
-        run: |
-        f2py -c mask_interpolation.o -m mask_interpolation --fcompiler=${{FC}} --f90flags='-fopenmp' -lgomp
+        run: f2py -c mask_interpolation.o -m mask_interpolation --fcompiler=${{FC}} --f90flags='-fopenmp' -lgomp
         
