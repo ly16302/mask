@@ -36,12 +36,12 @@ jobs:
     
       - name: Install GFortran Linux
         if: contains(matrix.os, 'ubuntu')
-        run: sudo apt-get install ${{FC}}
+        run: sudo apt-get install ${{matrix.fortran-compiler}}
           
       - name: Install GFortran macOS
         if: contains(matrix.os, 'macos')
         run: brew install gcc@9
     
       - name: Build
-        run: f2py -c mask_interpolation.o -m mask_interpolation --fcompiler=${{FC}} --f90flags='-fopenmp' -lgomp
+        run: f2py -c mask_interpolation.o -m mask_interpolation --fcompiler=${{matrix.fortran-compiler}} --f90flags='-fopenmp' -lgomp
         
