@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [macos-latest,ubuntu-latest]
         fortran-compiler: [gfortran] # Version of GFortran we want to use.
         python_version: ['3.8']
     env:
@@ -37,8 +37,10 @@ jobs:
     
       - name: Install GFortran macOS
         if: contains(matrix.os, 'macos')
-        run: brew install gfortran     
-      
+        run: |
+            brew install gcc || brew upgrade gcc || true
+            brew link gcc
+    
       - name: Build
         run: f2py -c -m src/mask_interpolation.f90 mask_interpolation
         
