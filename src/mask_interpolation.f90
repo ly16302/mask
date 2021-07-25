@@ -1,3 +1,8 @@
+module mask
+implicit none 
+
+contains
+		
 subroutine mask_interpolation_non_uniform (points,Npts,nxp,nyp,nzp,xp,yp,zp,&
                            mask)
 	 implicit none 
@@ -83,3 +88,5 @@ subroutine mask_interpolation_non_uniform (points,Npts,nxp,nyp,nzp,xp,yp,zp,&
 	!$OMP END PARALLEL DO
 	
 end subroutine mask_interpolation_non_uniform
+
+end module mask
