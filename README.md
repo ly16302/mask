@@ -6,7 +6,7 @@ mask generation library for wyvern
 
 || **Linux** | **OS X (10.14+)** | **Windows** | **Documentation**|
 |:------|:-----|:-----|:-----|:-----|
-|**Build**| ✅ | ✅ | ✅ | 
+|**Build**| ✅ | ✅ |  | 
 |**PyPI**| |
 
 ![alt text](https://github.com/ly16302/mask/blob/main/_static/lamp_3.png?raw=true)
