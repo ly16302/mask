@@ -38,7 +38,7 @@ jobs:
         if: contains(matrix.os, 'ubuntu')
         run: sudo apt-get install ${{matrix.fortran-compiler}}
           
-      - name: Install GFortran macOS
+      - name: Link GFortran for macOS
         if: contains(matrix.os, 'macos')
         run: ln -s gfortran-9 /usr/local/bin/gfortran
 ##        brew install gcc@9 || brew upgrade gcc@9 || true
@@ -51,11 +51,13 @@ jobs:
         
       - name: check gfortran version
         run: gfortran --version
-
+        
+      - name: remove pypy for macos build #something wroing with pypy
+        if: contains(matrix.os, 'macos')
+        run: export CIBW_SKIP='pp*'
+      
       - name: Build wheels
-        run: |
-          export CIBW_SKIP='pp*'
-          python -m cibuildwheel --output-dir wheelhouse 
+        run: python -m cibuildwheel --output-dir wheelhouse 
 
       - uses: actions/upload-artifact@v2
         with:
