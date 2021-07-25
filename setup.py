@@ -12,5 +12,6 @@ setup(
    author="Liang Yang",
    author_email="liang.yang@cranfield.ac.uk",
    description="Example package to demonstrate wheel issue",
-   ext_modules=[Extension('mask_interpolation', sources=['mask/mask_interpolation.f90'])],
+   long_description = "file: README.md",
+   ext_modules=[Extension('pre_processing', sources=['src/mask_interpolation.f90'])],
 )
