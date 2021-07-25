@@ -53,6 +53,7 @@ jobs:
         run: python -m pip install cibuildwheel==2.0.0
 
       - name: Build wheels  #something wroing with pypy for macos
+        if: contains(matrix.os, 'macos')
         run: |        
           export CIBW_SKIP='pp*'
           python -m cibuildwheel --output-dir wheelhouse 
