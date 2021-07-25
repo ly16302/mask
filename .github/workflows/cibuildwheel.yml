@@ -58,6 +58,14 @@ jobs:
           export CIBW_SKIP='pp*'
           python -m cibuildwheel --output-dir wheelhouse 
 
+      - name: Build wheels  #something wroing with pypy for macos
+        if: contains(matrix.os, 'windows')
+        run: python -m cibuildwheel --output-dir wheelhouse 
+      
+      - name: Build wheels  #something wroing with pypy for macos
+        if: contains(matrix.os, 'ubuntu')
+        run: python -m cibuildwheel --output-dir wheelhouse 
+      
       - uses: actions/upload-artifact@v2
         with:
           path: ./wheelhouse/*.whl
