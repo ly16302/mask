@@ -3,7 +3,7 @@ This example showcases:
 - using a points to generate masks
 """
 
-import mask
+from pre_processing import mask
 import numpy as np
 import scipy.io
 from pyevtk.hl import gridToVTK
