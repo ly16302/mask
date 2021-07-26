@@ -3,8 +3,10 @@ name: Documentation
 on:
   push:
     branches:
-      - master         # Push events on master branch
-
+      - main         # Push events on main branch
+    paths: #Condition to go ahead
+      - .github/workflows/document.yml
+      
 jobs:
   build:
 
