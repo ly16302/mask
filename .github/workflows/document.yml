@@ -26,3 +26,10 @@ jobs:
     - name: Generate documentation
       working-directory: docs
       run: make html
+      
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./docs/_build/html
