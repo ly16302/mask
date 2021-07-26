@@ -2,8 +2,9 @@
 mask generation library for wyvern 
 
 ![Actions Status](https://github.com/ly16302/mask/workflows/cibuildwheel/badge.svg)
-
-
+[![PyPI](https://img.shields.io/badge/pypi-v0.01-green)](https://pypi.org/project/mask-generation/)
+[![Downloads](https://pepy.tech/badge/mask-generation)](https://pepy.tech/project/mask-generation)
+ 
 || **Linux** | **OS X** | **Windows** | **Documentation**|
 |:------|:-----|:-----|:-----|:-----|
 |**Build**| ✅ | ✅ | ✅ | 
@@ -11,7 +12,7 @@ mask generation library for wyvern
 
 ![alt text](https://github.com/ly16302/mask/blob/main/_static/lamp_3.png?raw=true)
 
-## Installation [![Downloads](https://pepy.tech/badge/mask-generation)](https://pepy.tech/project/mask-generation)
+## Installation
 ```bash
 pip install mask-generation
 ```
