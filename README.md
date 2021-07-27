@@ -16,6 +16,7 @@ mask generation library for wyvern
 ![alt text](https://github.com/ly16302/mask/blob/main/_static/lamp_3.png?raw=true)
 
 ## Installation
+The most recent release can be installed simply by
 ```bash
 pip install mask-generation
 ```
