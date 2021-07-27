@@ -10,8 +10,8 @@ mask generation library for wyvern
  
 || **Linux** | **OS X** | **Windows** | **Documentation**|
 |:------|:-----|:-----|:-----|:-----|
-|**Build**| ✅ | ✅ | ✅ | 
-|**PyPI** | ✅ | ✅ | ✅ |
+|**Build**| ✅ | ✅ | ✅ | ✅ | 
+|**PyPI** | ✅ | ✅ | ✅ | ✅ |
 
 ![alt text](https://github.com/ly16302/mask/blob/main/_static/lamp_3.png?raw=true)
 
