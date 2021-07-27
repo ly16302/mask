@@ -1,7 +1,10 @@
 # mask-generation
 mask generation library for wyvern 
 
+
+
 ![Actions Status](https://github.com/ly16302/mask/workflows/cibuildwheel/badge.svg)
+[![Documentation](https://github.com/ly16302/mask/workflows/Documentation/badge.svg)](https://ly16302.github.io/mask/)
 [![PyPI](https://img.shields.io/badge/pypi-v0.01-green)](https://pypi.org/project/mask-generation/)
 [![Downloads](https://pepy.tech/badge/mask-generation)](https://pepy.tech/project/mask-generation)
  
