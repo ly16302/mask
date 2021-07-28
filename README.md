@@ -18,9 +18,8 @@ mask generation library for wyvern
 ## Dependancies
 ```bash
 pip install pyevtk
-pip install git+https://github.com/cpederkoff/stl-to-voxel.git
+pip install git+https://github.com/ly16302/stl-to-voxel.git
 ```
-
 
 ## Installation
 The most recent release can be installed simply by
