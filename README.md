@@ -15,6 +15,13 @@ mask generation library for wyvern
 
 ![alt text](https://github.com/ly16302/mask/blob/main/_static/lamp_3.png?raw=true)
 
+## Dependancies
+```bash
+pip install pyevtk
+pip install git+https://github.com/cpederkoff/stl-to-voxel.git
+```
+
+
 ## Installation
 The most recent release can be installed simply by
 ```bash
