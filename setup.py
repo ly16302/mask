@@ -10,4 +10,5 @@ setup(
    name="mask-generation",
    version="0.0.1",
    ext_modules=[Extension('pre_processing', sources=['src/mask_interpolation.f90'])],
+   install_requires=['pyevtk'],
 )
